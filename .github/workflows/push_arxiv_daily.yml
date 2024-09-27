@@ -12,7 +12,7 @@ jobs:
   daily-push:
     runs-on: ubuntu-latest
     env:
-      SERVERCHAN_API_KEY: ${{ secrets.SERVERCHAN_API_KEY }}
+    #  SERVERCHAN_API_KEY: ${{ secrets.SERVERCHAN_API_KEY }}
       QUERY: "cs.IR"
       LIMITS: 5
       FEISHU_URL: ${{ secrets.FEISHU_TOKEN }}
