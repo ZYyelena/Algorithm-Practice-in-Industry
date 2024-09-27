@@ -134,10 +134,10 @@ def update_results(results):
         if daily_limits:
             break
     source = [item[-1]["paper_abstract"] for item in ret_items]
-    target = translate(source, CAIYUN_TOKEN=CAIYUN_TOKEN)
-    if len(target) == len(source):
-        for i, _ in enumerate(ret_items):
-            ret_items[i][-1].update({"translated": target[i]})
+    #target = translate(source, CAIYUN_TOKEN=CAIYUN_TOKEN)
+    #if len(target) == len(source):
+    for i, _ in enumerate(ret_items):
+        ret_items[i][-1].update({"translated": source[i]})
     for key, i, item in ret_items:
         results[key][i].update(item)
     save_results(results)
