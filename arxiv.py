@@ -11,10 +11,10 @@ import json
 import datetime
 from tqdm import tqdm
 
-SERVERCHAN_API_KEY = os.environ.get("SERVERCHAN_API_KEY", None)
+#SERVERCHAN_API_KEY = os.environ.get("SERVERCHAN_API_KEY", None)
 QUERY = os.environ.get('QUERY', 'cs.IR')
 LIMITS = int(os.environ.get('LIMITS', 3))
-CAIYUN_TOKEN = os.environ.get("CAIYUN_TOKEN", None)
+#CAIYUN_TOKEN = os.environ.get("CAIYUN_TOKEN", None)
 FEISHU_URL = os.environ.get("FEISHU_URL", None)
 
 def translate(source, direction='en2zh', CAIYUN_TOKEN=CAIYUN_TOKEN):
@@ -150,10 +150,10 @@ def save_and_translate(papers, filename='arxiv.json'):
     source = []
     for paper in untranslated_papers:
         source.append(paper['summary'])
-    target = translate(source)
-    if len(target) == len(untranslated_papers):
-        for i in range(len(untranslated_papers)):
-            untranslated_papers[i]['translated'] = target[i]
+   # target = translate(source)
+   # if len(target) == len(untranslated_papers):
+    for i in range(len(untranslated_papers)):
+        untranslated_papers[i]['translated'] = source[i]
     
     results.extend(untranslated_papers)
 
@@ -167,8 +167,8 @@ def save_and_translate(papers, filename='arxiv.json'):
         
 def cronjob():
 
-    if SERVERCHAN_API_KEY is None:
-        raise Exception("未设置SERVERCHAN_API_KEY环境变量")
+    #if SERVERCHAN_API_KEY is None:
+    #    raise Exception("未设置SERVERCHAN_API_KEY环境变量")
 
     print('[+] 开始执行每日推送任务....')
 
@@ -181,7 +181,7 @@ def cronjob():
     if papers == []:
         
         push_title = f'Arxiv:{QUERY}[X]@{today}'
-        send_wechat_message('', '[WARN] NO UPDATE TODAY!', SERVERCHAN_API_KEY)
+      #  send_wechat_message('', '[WARN] NO UPDATE TODAY!', SERVERCHAN_API_KEY)
 
         print('[+] 每日推送任务执行结束')
 
