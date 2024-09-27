@@ -13,10 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SERVERCHAN_API_KEY: ${{ secrets.SERVERCHAN_API_KEY }}
-      CAIYUN_TOKEN: ${{ secrets.CAIYUN_TOKEN }}
       QUERY: "cs.IR"
       LIMITS: 5
-      FEISHU_URL: ${{ secrets.FEISHU_URL }}
+      FEISHU_URL: ${{ secrets.FEISHU_TOKEN }}
 
     permissions:
       issues: write
