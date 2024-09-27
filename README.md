@@ -24,14 +24,6 @@
 
 已提供issue模板，具体内容参考issue：https://github.com/Doragd/Algorithm-Practice-in-Industry/issues/1
 
-## 一起交流
-* 关于我：2023届毕业，之前做NLP方向，毕业后转去搜广推方向，一枚努力适应的菜鸡。目前在做召回方向。
-* 我的论文阅读笔记：https://github.com/doragd/paperreading
-* 和我交流：
-
-<img src=https://github.com/Doragd/Algorithm-Practice-in-Industry/assets/26213546/a5575665-37f9-43de-941f-5133a6114d7e height="30%" width="30%"></img>
-
-
 ## 搜广推论文推送Bot
 * Arxiv论文：利用github action + 彩云小译 + 飞书机器人每天推送cs.IR和cs.CL的新论文到飞书群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/push_arxiv_daily.yml)
 * 顶会论文：利用github action + 彩云小译 + 飞书机器人每天推送搜广推顶会的论文到到飞书群组中。[配置文件](https://github.com/Doragd/Algorithm-Practice-in-Industry/blob/main/.github/workflows/push_conf_daily.yml)
